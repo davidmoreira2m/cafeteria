@@ -149,11 +149,44 @@ body.active {
    width: 100%;
 }
 
+.btn {
+   color: var(--white);
+   display: flex;
+   align-items: center;
+   gap: 3px;
+   max-width: max-content;
+   padding: 18px 20px;
+   font-size: var(--fs-6);
+   font-weight: var(--fw-500);
+   text-transform: uppercase;
+   letter-spacing: 0.5px;
+   line-height: 1;
+   border-radius: var(--radius-5);
+   transition: var(--transition-1);
+}
+
+.btn-primary {
+   background-color: var(--camel);
+}
+
+.btn-secondary {
+   background-color: var(--rich-black-fogra-29);
+}
+
+.btn:is(:hover, :focus-visible) {
+   background-color: var(--white);
+   color: var(--camel);
+}
+
+.btn ion-icon {
+   font-size: unset;
+}
+
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
 
-.navbar,
+/* .navbar, */
 .header-top {
    display: none;
 }
@@ -190,4 +223,69 @@ body.active {
 .header :is(.logo, .nav-open-btn) {
    position: relative;
    z-index: 2;
+}
+
+.header-bottom .container {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+
+.nav-open-btn .span {
+   width: 25px;
+   height: 2px;
+   background-color: var(--white);
+   margin-block: 10px;
+   transition: var(--transition-1);
+}
+
+.nav-open-btn.active .span:first-child {
+   transform: rotate(45deg) translateY(8px);
+}
+
+.nav-open-btn.active .span:last-child {
+   transform: rotate(-45deg) translateY(-8px);
+}
+
+.navbar {
+   position: fixed;
+   bottom: 100%;
+   left: 0;
+   width: 100%;
+   height: 100vh;
+   background-color: var(--rich-black-fogra-39);
+   padding: 130px 16px;
+   z-index: 1;
+   transition: 0.5 var(--cubic-in);
+   transition-delay: 0.5s;
+   visibility: hidden;
+}
+
+.navbar.active {
+   transform: translateY(100%);
+   visibility: visible;
+   transition: 0.75s var(--cubic-out);
+   transition-delay: 0s;
+}
+
+.navbar > * {
+   opacity: 1;
+   transition-delay: 0.75s;
+}
+
+.navbar-link {
+   color: var(--white);
+   font-size: var(--fs-3);
+   font-weight: var(--fw-500);
+   text-transform: uppercase;
+   margin-block-end: 5px;
+   transition: var(--transition-1);
+}
+
+.navbar-link:is(:hover, :focus-visible) {
+   color: var(--camel);
+}
+
+.navbar .btn {
+   margin-block-start: 25px;
 }
