@@ -105,7 +105,6 @@ body {
    font-size: 1.6rem;
    line-height: 1.75;
    overflow-x: hidden;
-   height: 300vh;
 }
 
 body.active {

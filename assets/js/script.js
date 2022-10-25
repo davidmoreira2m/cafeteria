@@ -25,3 +25,16 @@ const closeNavbar = function () {
 };
 
 addEventOnElements(navbarLinks, "click", closeNavbar);
+
+// Ativar Header
+const header = document.querySelector("[data-header]");
+
+const activeElemOnScroll = function () {
+   if (window.scrollY >= 50) {
+      header.classList.add("active");
+   } else {
+      header.classList.remove("active");
+   }
+};
+
+window.addEventListener("scroll", activeElemOnScroll);
