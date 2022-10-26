@@ -181,6 +181,62 @@ body.active {
    font-size: unset;
 }
 
+.section {
+   padding-block: var(--section-padding);
+}
+
+.section-subtitle {
+   text-transform: uppercase;
+}
+
+.section:not(.hero) .section-subtitle {
+   color: var(--camel);
+}
+
+.has-before,
+.has-after {
+   position: relative;
+   z-index: 1;
+}
+
+.has-before::before,
+.has-after::after {
+   content: "";
+   position: absolute;
+}
+
+.h1,
+.h2,
+.h3 {
+   font-family: var(--ff-oswald);
+   line-height: 1.2;
+   color: var(--white);
+}
+
+.h1 {
+   font-size: var(--fs-1);
+   font-weight: var(--fw-500);
+}
+
+.h2,
+.h3 {
+   font-weight: var(--fw-400);
+}
+
+.h2 {
+   font-size: var(--fs-2);
+}
+
+.h3 {
+   font-size: var(--fs-3);
+}
+
+.has-bg-image {
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
@@ -287,4 +343,38 @@ body.active {
 
 .navbar .btn {
    margin-block-start: 25px;
+}
+
+/* HERO */
+
+.hero {
+   margin-block-start: 83px;
+   min-height: 100vh;
+   display: grid;
+   align-items: center;
+   background-position: left;
+}
+
+.hero .section-subtitle {
+   color: var(--white);
+   padding-inline-start: 50px;
+}
+
+.hero .section-subtitle::before {
+   top: 50%;
+   left: 0;
+   width: 30px;
+   height: 1px;
+   background-color: var(--camel);
+}
+
+.hero-title {
+   max-width: 12ch;
+   margin-block: 10px 50px;
+}
+
+.hero .btn-group {
+   display: flex;
+   flex-wrap: wrap;
+   gap: 10px;
 }
