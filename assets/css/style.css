@@ -237,6 +237,23 @@ body.active {
    background-position: center;
 }
 
+.section-title {
+   margin-block-start: 10px;
+}
+
+.img-holder {
+   aspect-ratio: var(--width) / var(--height);
+   overflow: hidden;
+   background-color: var(--light-gray);
+}
+
+.img-cover {
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   transition: var(--transition-2);
+}
+
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
@@ -377,4 +394,40 @@ body.active {
    display: flex;
    flex-wrap: wrap;
    gap: 10px;
+}
+
+/* ABOUT */
+
+.about {
+   background-color: var(--rich-black-fogra-39);
+}
+
+.about .container {
+   display: grid;
+   gap: 50px;
+}
+
+.about .section-title {
+   margin-block-end: 30px;
+   max-width: 18ch;
+}
+
+.about-card {
+   margin-block-start: 30px;
+   background-color: var(--camel);
+   padding: 20px;
+   display: flex;
+   align-items: flex-start;
+   gap: 20px;
+   border-radius: var(--radius-5);
+}
+
+.about-card .card-banner {
+   flex-shrink: 0;
+   border-radius: var(--radius-circle);
+}
+
+.about-card .card-text {
+   font-style: italic;
+   columns: var(--white);
 }
