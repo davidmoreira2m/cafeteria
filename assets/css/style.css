@@ -14,7 +14,7 @@
    --camel: hsl(27, 34%, 58%);
    --white: hsl(0, 0%, 100%);
 
-   /* GRADIENTE */
+   /* GRADIENT */
    --gradient: linear-gradient(to top, hsla(210, 25%, 5%, 0.95) 0, hsla(210, 24%, 7%, 0.45) 70%, hsla(207, 24%, 7%, 0) 100%);
 
    /* TIPOGRAFIAS */
@@ -254,6 +254,11 @@ body.active {
    transition: var(--transition-2);
 }
 
+.grid-list {
+   display: grid;
+   gap: 30px;
+}
+
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
@@ -429,5 +434,61 @@ body.active {
 
 .about-card .card-text {
    font-style: italic;
-   columns: var(--white);
+   color: var(--white);
+}
+
+/* SERVICE */
+
+.service {
+   background-color: var(--rich-black-fogra-39);
+}
+
+.service-card {
+   position: relative;
+   overflow: hidden;
+   z-index: 1;
+}
+
+.service-card .card-banner {
+   position: absolute;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   z-index: -1;
+   transition: var(--transition-2);
+}
+
+.service-card:is(:hover, :focus-visible) .card-banner {
+   transform: scale(1.05);
+}
+
+.service-card .card-content {
+   background-color: var(--rich-black-fogra-29_a85);
+   text-align: center;
+   padding-block: 95px;
+   transition: var(--transition-2);
+}
+
+.service-card:is(:hover, :focus-visible) .card-content {
+   background-color: var(--rich-black-fogra-29_a75);
+}
+
+.service-card .card-content::before {
+   inset: 25px;
+   border: 1px solid var(--camel);
+   opacity: 0.3;
+   border-radius: var(--radius-5);
+   transition: var(--transition-2);
+}
+
+.service-card:is(:hover, :focus-visible) .card-content::before {
+   opacity: 1;
+}
+
+.service-card .card-content ion-icon {
+   font-size: 50px;
+   color: var(--white);
+   margin-inline: auto;
+   margin-block-end: 5px;
 }
