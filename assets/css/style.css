@@ -259,6 +259,10 @@ body.active {
    gap: 30px;
 }
 
+.text-center {
+   text-align: center;
+}
+
 /* ---------------------------------------------- */
 /* HEADER */
 /* ---------------------------------------------- */
@@ -491,4 +495,51 @@ body.active {
    color: var(--white);
    margin-inline: auto;
    margin-block-end: 5px;
+}
+
+/* MENU */
+
+.menu {
+   background-attachment: fixed;
+}
+
+.menu .section-title {
+   margin-block-end: 50px;
+}
+
+.menu .grid-list {
+   background-color: var(--rich-black-fogra-39);
+   padding: 20px;
+   gap: 40px;
+   background-repeat: no-repeat;
+   background-size: 500px;
+   background-position: center;
+}
+
+.menu-card .card-banner {
+   width: 160px;
+   border-radius: var(--radius-5);
+   margin-block-end: 15px;
+}
+
+.menu-card .card-content {
+   display: grid;
+}
+
+.menu-card .card-text {
+   margin-block: 10px;
+}
+
+.menu-card .card-price {
+   color: var(--camel);
+   font-family: var(--ff-merienda);
+   font-size: var(--fs-4);
+   text-align: right;
+}
+
+.menu-card .card-price::before {
+   top: 50%;
+   left: 0;
+   width: calc(100% - 90px);
+   border: 1px dashed var(--camel);
 }
